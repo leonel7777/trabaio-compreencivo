@@ -1,0 +1,178 @@
+/* 1. CONFIGURAÇÕES GERAIS E RESETS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121214;
+    color: #e1e1e6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* 2. CABEÇALHO */
+header {
+    background: linear-gradient(135px, #633bbc, #48239e);
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 3. CONTEÚDO PRINCIPAL (LISTA DE JOGOS) */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Formatação do ranking (1, 2, 3) */
+ol {
+    list-style-position: inside;
+}
+
+/* Bloco de cada jogo */
+ol > li {
+    background-color: #1f2029;
+    border: 1px solid #2e2f3d;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos dos Jogos */
+h2 {
+    color: #996dff;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #383a4d;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Subtítulos internos (Impacto financeiro, Franquia, etc) */
+h3 {
+    color: #04d361;
+    font-size: 1.3rem;
+    margin: 20px 0 10px 0;
+}
+
+p {
+    color: #a8a8b3;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+/* Listas de informações do jogo */
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 8px;
+    color: #c4c4cc;
+}
+
+/* Sub-listas (detalhes financeiros e de história) */
+ul ul {
+    list-style-type: circle;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+ul ul li {
+    color: #a8a8b3;
+}
+
+/* 4. IMAGENS */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 20px;
+    border: 2px solid #383a4d;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efeito visual ao passar o mouse na imagem */
+img:hover {
+    transform: scale(1.02);
+    border-color: #996dff;
+}
+
+/* 5. RODAPÉ / CRÉDITOS */
+section {
+    background-color: #1a1b24;
+    border-top: 4px solid #633bbc;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+section h3 {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+section ul {
+    list-style-type: none;
+    margin-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+section ul li {
+    background-color: #292a37;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #996dff;
+    border: 1px solid #383a4d;
+}
+
+/* 6. RESPONSIVIDADE (PARA CELULARES) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    header {
+        padding: 25px 10px;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    ol > li {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    section ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
